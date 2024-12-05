@@ -2,6 +2,7 @@ mod day_1;
 mod day_2;
 mod day_3;
 mod day_4;
+mod day_5;
 
 use std::fs::File;
 use std::io::BufReader;
@@ -34,6 +35,13 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     
     println!("Result day 4 part 1: {}", day_4::part_1(&mut reader_day_4).unwrap());
     println!("Result day 4 part 2: {}", day_4::part_2(&mut reader_day_4).unwrap());
+
+    let file_day_5 = File::open("inputs/5.txt")?;
+    let mut reader_day_5 = BufReader::new(file_day_5);
+
+    
+    println!("Result day 5 part 1: {}", day_5::part_1(&mut reader_day_5).unwrap());
+    println!("Result day 5 part 2: {}", day_5::part_2(&mut reader_day_5).unwrap());
 
     Ok(())
 }
